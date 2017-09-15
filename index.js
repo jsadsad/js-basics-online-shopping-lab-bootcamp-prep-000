@@ -11,10 +11,10 @@ function setCart(c) {
 
 function addToCart(itemName) {
  var itemPrice = Math.floor(Math.random() * 100);
- cart.push({[itemName]: itemPrice});
+ cart.push({[itemName]:itemPrice});
  console.log(`${itemName} has been added to cart.`);
 
- return cart;
+ return getCart();
 }
 
 function viewCart() {
@@ -24,10 +24,10 @@ function viewCart() {
   var resultArray =[];
   let i = 0;
 
-  while (i < cart.length;) {
+  while (i < cart.length) {
     var item = Object.keys(cart[i])[0];
-    var price = cart[i][itemName];
-    resultArray.push(itemName + ' at $' + price);
+    var price = cart[i][item];
+    resultArray.push(item + ' at $' + price);
     i++
   }
   console.log(`In your cart, you have ${resultArray.join(', ')}.`)
@@ -38,10 +38,10 @@ function total() {
 
   for (var i = 0; i < cart.length; i++) {
     for (var itemName in cart[i]) {
-      t += cart[i][itemName];
+      total += cart[i][itemName];
     }
   }
-  return t;
+  return total;
 }
 
 function removeFromCart(item) {
