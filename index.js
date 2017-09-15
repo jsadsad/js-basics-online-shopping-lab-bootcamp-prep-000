@@ -31,7 +31,16 @@ function viewCart() {
       resultArray.push(`${item} at \$${price}`);
       i++
     }
-    switch
+    switch(resultArray.length) {
+      case 1:
+        break;
+      case 2:
+        resultArray = resultArray.join(' and ');
+        break;
+      default:
+        resultArray[cart.length - 1] = "and ".concat(resultArray[cart.length - 1]);
+        resultArray = resultArray.join(',');
+    }
     console.log(`In your cart, you have ${resultArray.join(', ')}.`)
   }
 }
