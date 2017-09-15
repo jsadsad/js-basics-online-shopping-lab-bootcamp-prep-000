@@ -50,7 +50,8 @@ function removeFromCart(item) {
   for (var n = 0; n < cart.length; n++) {
     if (cart[n].hasOwnProperty(item)) {
       var inCart = true;
-      cart.shift(item)
+      cart = cart.slice(0, i).concat(cart.slice(i + 1));
+      cart.length--;
     }
   }
   if (!inCart) {
