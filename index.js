@@ -19,7 +19,7 @@ function addToCart(itemName) {
 function viewCart() {
   if (cart.length === 0) {
     console.log('Your shopping cart is empty.');
-  } else {
+  }
     var resultArray =[];
     let i = 0;
 
@@ -41,7 +41,6 @@ function viewCart() {
         resultArray[cart.length - 1] = "and ".concat(resultArray[cart.length - 1]);
     }
     console.log(`In your cart, you have ${resultArray.join(', ')}.`)
-  }
 }
 
 function total() {
