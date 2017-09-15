@@ -24,11 +24,14 @@ function viewCart() {
     let i = 0;
 
     while (i < cart.length) {
-      var item = Object.keys(cart[i])[0];
-      var price = cart[i][item];
-      resultArray.push(item + ' at $' + price);
+      var itemAndPrice = cart[i]
+      var item = Object.keys(itemAndPrice)[0];
+      var price = itemAndPrice[item];
+
+      resultArray.push(`${item} at \$${price}`);
       i++
     }
+    switch
     console.log(`In your cart, you have ${resultArray.join(', ')}.`)
   }
 }
