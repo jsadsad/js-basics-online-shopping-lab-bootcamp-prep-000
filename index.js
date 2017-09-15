@@ -40,7 +40,7 @@ function viewCart() {
       default:
         resultArray[cart.length - 1] = "and ".concat(resultArray[cart.length - 1]);
     }
-    console.log(`In your cart, you have ${resultArray.join(', ')}.`)
+    console.log(`In your cart, you have ${resultArray}.`)
 }
 
 function total() {
