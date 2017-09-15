@@ -39,9 +39,8 @@ function viewCart() {
         break;
       default:
         resultArray[cart.length - 1] = "and ".concat(resultArray[cart.length - 1]);
-        resultArray = resultArray.join(', ');
     }
-    console.log(`In your cart, you have ${resultArray.join(', ')}.`)
+    console.log(`In your cart, you have ${resultArray.join(', ').`)
   }
 }
 
